@@ -32,7 +32,7 @@ limitations under the License.
         <velocity_version>1.7</velocity_version>
 
         <!-- Temporarily added for lower version compatibility  -->
-        <spring_version>4.3.10.RELEASE</spring_version>
+        <spring_version>5.2.6.RELEASE</spring_version>
         <fastjson_version>1.2.70</fastjson_version>
         <curator_version>2.12.0</curator_version>
         <jetty_version>6.1.26</jetty_version>
@@ -59,7 +59,7 @@ limitations under the License.
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework</groupId>
-                    <artifactId>spring</artifactId>
+                    <artifactId>spring-context</artifactId>
                 </exclusion>
                 <exclusion>
                     <groupId>javax.servlet</groupId>
@@ -76,12 +76,17 @@ limitations under the License.
             <artifactId>jfreechart</artifactId>
             <version>${jfreechart_version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-framework-bom</artifactId>
+            <artifactId>spring-context</artifactId>
             <version>${spring_version}</version>
-            <type>pom</type>
-            <scope>import</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring_version}</version>
         </dependency>
 
         <!-- Temporarily added for lower version compatibility  -->
